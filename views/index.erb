@@ -1,0 +1,17 @@
+
+<a-scene embedded arjs='debugUIEnabled: false;'>
+
+  <% @json_data.each do |i| %>
+    <a-marker preset="custom" type="pattern" url="/marker/<%= i.first %>.patt" data-marker_id="<%= i.first %>" registerevents></a-marker>
+  <% end %>
+
+</a-scene>
+
+<div id="results_wrap">
+  <p></p>
+</div>
+
+<div id="image_wrap">
+  <img src="#" alt="検知結果の画像">
+  <p>画像検索APIより</p>
+</div>
