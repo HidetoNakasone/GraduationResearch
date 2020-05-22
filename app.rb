@@ -1,8 +1,8 @@
 
-require 'sinatra'
-require 'google_custom_search_api'
+require 'bundler'
+Bundler.require
+
 require 'net/http'
-require 'json'
 
 # 開発環境のみ実行 (Heroku環境だと実行しない)
 if development?
